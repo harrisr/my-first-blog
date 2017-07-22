@@ -1,4 +1,45 @@
 <html>
+<head>
+<title>Django Girls Workshop Blog</title>
+</head>
+
+<body>
+	<div><h1><a href="">Django Girls Workshop Blog</a></h1></div>
+
+	<hr/>
+
+	<div>
+	<p>published:  1/1/2017  08:08:08</p>
+	<h2><a href="">Post #1</a></h2>
+	<p>Text</p>
+	</div>
+
+	<hr/>
+
+	<div>
+	{{ posts }}
+	</div>
+
+	<hr/>
+
+	<div>
+	{% for post in posts %}
+
+	
+
+	<div>
+	<p>published:  {{ post.published_date }}</p>
+	<h2><a href="">{{ post.title }}</a></h2>
+	<p>{{ post.text|linebreaksbr }}</p>
+	</div>
+
+	{% endfor %}
+	</div>
+	
+
+	<hr/>
+
 	<p>Hello</p>
 	<p>World!</p>
+</body>
 </html>
